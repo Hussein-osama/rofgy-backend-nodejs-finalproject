@@ -3,13 +3,13 @@ services:
   mongodb:
     image: mongo
     ports:
-      - '27018:27017'
+      - '27017:27017'
 
   socialmediadashboard:
     build: .
     image: socialapp
     ports:
-      - '3000:3000'
+      - "3000:3000"
     depends_on:
       - mongodb
     environment:
